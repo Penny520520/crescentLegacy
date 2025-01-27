@@ -1,0 +1,121 @@
+.header {
+  background-color: transparent;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  opacity: 0;
+  visibility: visible;
+  transform: translateY(0%);
+  transition: all 0.35s ease ;
+}
+
+.header .global-padding {
+  padding:50px 2.6vw;
+  transition: padding 0.35s ease ;
+}
+.header .scroll.global-padding {
+  padding:20px 2.6vw;
+}
+.header .burger { 
+  position: relative;
+  z-index: 100;
+}
+.header .row {
+  align-items: center;
+}
+.header .logo {
+  width: 268.66px;
+  height: auto;
+  transition: width 0.35s ease ;
+}
+.header .scroll.logo  {
+  width: 218.33px;
+}
+.header ul {
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.header .nav {
+  transition: opacity .2s ease-in;
+
+}
+.header .nav {
+  font-family: CircularStd-Book;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  transition: color 0.35s ease ;
+}
+.header .nav.active {
+  color: #A0753B!important;
+}
+/* burger */
+.header .line {
+  width: 50px;
+  height: 2px;
+  transition: transform 0.35s;
+  background-color: #FFFFFF;
+}
+.header .line:last-child {
+  margin-top: 6px;
+}
+
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  .header .global-padding {
+    padding:clamp(0px,3vw,50px) 2.6vw;
+  }
+  .header .scroll.global-padding {
+    padding:clamp(0px,1.2vw,20px) 2.6vw;
+  }
+  .header .logo {
+    width: clamp(200px,16vw,268.66px);
+  }
+  .header .scroll.logo  {
+    width: clamp(208.62px,14vw,218.33px);
+  }
+  .header .nav {
+    font-size: clamp(15px,1.2vw,20px);
+    line-height: clamp(22px,1.5vw,28px);
+  }
+}
+@media (max-width: 899px) { 
+  .header .global-padding {
+    padding: 20px 2.6vw;
+  }
+  .header .scroll.global-padding {
+    padding: 13.6px 2.6vw;
+  }
+  .header .row {
+    justify-content: space-between;
+  }
+  .header .burger {
+    margin-left: auto;
+  }
+  .header .logo {
+    width: 239.96px;
+    position: relative;
+    z-index: 100;
+  }
+  .header .scroll.logo  {
+    width: 208.62px;
+  }
+}
+@media (max-width: 599px) {
+  .header .global-padding {
+    padding: 20px 6vw;
+  }
+  .header .scroll.global-padding {
+    padding:13.6px 6vw;
+  }
+
+}
+

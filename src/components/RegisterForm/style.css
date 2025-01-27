@@ -1,0 +1,221 @@
+/*
+|------------------------------------------------------
+|  register
+|------------------------------------------------------
+*/
+.register-form .form .details {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.form .wrapper {
+  font-family: FS-Siena-Regular;
+  font-weight: normal;
+  line-height: 26px;
+  width: 470px;
+  margin-bottom: 53.5px;
+  margin-right: 34.8px;
+}
+.form .wrapper.checkbox-contianer {
+  margin-bottom: 49px;
+}
+.form label {
+  font-size: 14px;
+  color: #3A342D;
+  text-transform: uppercase;
+}
+.form .wrapper > input {
+  font-family: CircularStd-Book;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(58, 52, 45, 0.3);
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+  height: 40px;
+  border-radius: 0px;
+  padding-bottom: 1px;
+}
+.form .wrapper > input::placeholder {
+  color:#3A342D;
+}
+.form .selectPlaceholderText {
+  font-family: CircularStd-Book;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+}
+
+.form input:focus {
+  outline: none;
+  background: transparent;
+}
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form input:-webkit-autofill:active {
+  transition: background-color 1000s;
+  -webkit-text-fill-color: #3A342D !important;
+}
+
+.form .enquiry-wrapper {
+  height: 120px;
+  width: 92%;
+  max-width: 974.8px;
+}
+.form #enquiry {
+  height: 120px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(58, 52, 45, 0.3);
+}
+.form textarea {
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+
+}
+.form textarea::placeholder {
+  color: #3A342D;
+}
+
+.checkbox-wrapper {
+  display: flex;
+}
+.form .wrapper.checkbox-contianer {
+  margin-top: 10px;
+}
+
+.form .registerSelect {
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+}
+.form .registerSelect > div {
+  border: none;
+  border-bottom: 1px solid rgba(59, 84, 90, 0.5);
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+}
+.registerSelect > div > div:nth-child(1) > div {
+  color: #3A342D;
+}
+
+.form .checkbox-wrapper {
+  width: 545px;
+}
+.form .checkbox {
+  width: 200px !important;
+  height: 25px !important;
+  color: #3A342D !important;
+  background-color: transparent !important;
+  border: 1px solid #3A342D !important;
+}
+.form .agreement {
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3A342D;
+  text-align: left;
+}
+.form .is-small {
+  font-family: CircularStd-Book;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px !important;
+  opacity: 0.3;
+  margin-top: 15px;
+  color: #3A342D;
+  letter-spacing: 0.5px;
+  text-transform:none;
+}
+
+.mobile-version.is-small {
+  display: none;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #A0753B;
+  padding: 13px 45px;
+  color: #ffffff;
+  margin: 0 auto;
+  border: none;
+}
+.submit-btn:hover {
+  border:none
+}
+
+.register-form .message {
+  font-family: CircularStd-Book;
+  font-size: 20px;
+  line-height: 28px;
+  color: #413F3C;
+  margin-top: 80px;
+}
+.register-form .error {
+  color: red;
+}
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1850px) { 
+  .form .wrapper {
+    width: clamp(250px, 23vw, 470px);
+  }
+  .form .enquiry-wrapper {
+    width: 88%;
+  }
+}
+@media (max-width: 1700px) { 
+  .form .wrapper {
+    margin-bottom: clamp(0px,2.8vw,53.5px);
+    margin-right: clamp(0px,1.8vw,34.8px);
+  }
+  .form .wrapper > input,
+  .form .selectPlaceholderText ,
+  .form textarea,
+  .form .wrapper.checkbox-contianer,
+  .form .registerSelect,
+  .form .registerSelect > div,
+  .form .agreement{
+    font-size: clamp(13px,0.8vw,14px);
+    line-height: clamp(20px,1.4vw,26px);
+  }
+
+}
+@media (max-width: 990px) { 
+  .form .wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 899px) { 
+  .form .wrapper {
+    margin-bottom: 50px;
+    margin-right: 0;
+  }
+  .form .wrapper > input,
+  .form .selectPlaceholderText ,
+  .form textarea,
+  .form .wrapper.checkbox-contianer,
+  .form .registerSelect,
+  .form .registerSelect > div,
+  .form .agreement{
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .form .wrapper.enquiry-wrapper {
+    margin-bottom: 40px;
+  }
+
+}

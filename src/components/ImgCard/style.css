@@ -1,0 +1,108 @@
+.img-card {
+  border-radius: 10px;
+  width: fit-content;
+  width: 100%;
+  overflow: hidden;
+}
+.img-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.img-card .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(0,0,0,0.5) 100%);
+  mix-blend-mode: multiply;
+}
+.img-card .wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 25px 25px 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sell-status {
+  background-color: #A0753B;
+  border-radius: 17px;
+  font-family: CircularStd-Book;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  width: fit-content;
+  padding: 11px 18px;
+  opacity: 0.85;
+}
+.title {
+  font-family: CircularStd-Book;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+.img-card .subtitle {
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  .img-card .wrapper {
+    padding: clamp(0px,1.4vw,25px) clamp(0px,1.4vw,25px) clamp(0px,1.8vw,31px);
+  }
+  .sell-status {
+    font-size: clamp(12px,1vw,14px);
+    line-height: clamp(12px,1vw,13px);
+  }
+  .title {
+    font-size: clamp(0px,1.9vw,30px);
+    line-height: clamp(0px,3vw,42px);
+  }
+}
+@media (max-width: 899px) { 
+  .img-card .wrapper {
+    padding: 15px 0 21px 15px;
+  }
+  .title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+  .sell-status {
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 29px;
+  }
+
+}
+@media (max-width: 599px) { 
+  .title {
+    font-size: 30px;
+  }
+
+}
+@media (max-width: 450px) {
+  .title {
+    font-size: 26px;
+  }
+}

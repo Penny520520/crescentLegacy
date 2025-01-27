@@ -1,0 +1,99 @@
+
+/*
+|------------------------------------------------------
+|  homeowner-care
+|------------------------------------------------------
+*/
+.homeowner-care {
+  background-color: #ffffff;
+}
+.homeowner-care p {
+  margin: 40px 0 87px;
+  width: 83%;
+}
+.homeowner p a{
+  color: #EDB973;
+}
+.homeowner-care .subtitle.years {
+  margin: 13px 0 15px;
+}
+
+/*
+|------------------------------------------------------
+|  online-service
+|------------------------------------------------------
+*/
+.online-service {
+  background-color: #FDF8F2;
+}
+.online-service h2 {
+  padding: 40px 0 50px;
+}
+.online-service .left p {
+  width: 83%;
+}
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  .homeowner-care p {
+    margin: clamp(0px,2vw,40px) 0 clamp(0px,4.5vw,87px);
+  }
+  .homeowner-care .subtitle.years {
+    margin: clamp(0px,0.9vw,13px) 0 clamp(0px,1vw,15px);
+  }
+  .online-service h2 {
+    padding: clamp(0px,2vw,40px) 0 clamp(0px,2.8vw,50px);
+  }
+
+}
+@media (max-width: 1200px) { 
+  .homeowner-care .subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 899px) { 
+  .homeowner-care.global-padding{
+    padding-bottom: 75px;
+  }
+  .homeowner-care img {
+    height: 493px;
+  }
+  .homeowner-care h3 {
+    margin: 60px 0 40px;
+  }
+  .homeowner-care p {
+    margin: 0 0 70px;
+    width: 100%;
+  }
+  .homeowner-care .num {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .homeowner-care .subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .homeowner-care .subtitle.years {
+    margin: 11px 0 13px;
+  }
+  .online-service .left p {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  .online-service h2 {
+    padding:20px 0 40px;
+  }
+  /* .homeowner-care .wrapper {
+    margin-bottom:35px;
+    margin-right: 10px;
+  } */
+}
+@media (max-width: 438px) { 
+  .homeowner-care .subtitle {
+    font-size: 14.5px;
+  }
+}

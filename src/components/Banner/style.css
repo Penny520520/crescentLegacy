@@ -1,0 +1,68 @@
+/* bnr */
+.banner {
+  z-index: 1;
+}
+.bg-video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.bg-video {
+  object-fit: cover;
+}
+.bg-video[poster] {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-video-container::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+}
+
+.banner .wrapper-h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.banner h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.banner .line {
+  height: 50px;
+  border: 1px solid #FFFFFF;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  bottom: 20px;
+}
+/*
+|----------------------------------------------------------------
+| Query media
+|----------------------------------------------------------------
+*/
+@media (max-width: 899px) {
+  .banner .line {
+    border: 0.5px solid #FFFFFF;
+  }
+
+}

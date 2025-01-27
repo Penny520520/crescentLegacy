@@ -1,0 +1,31 @@
+
+/* landing */
+.landing-loader {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #A0753B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  transition: all 0.4s ease;
+}
+.landing-loader img {
+  width: 788.02px;
+  height: auto;
+  transform: translateY(-50%);
+}
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) {
+  .landing-loader img {
+    width: clamp(404.53px,45vw,788.02px);
+  }
+
+}

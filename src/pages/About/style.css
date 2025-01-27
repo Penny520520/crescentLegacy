@@ -1,0 +1,316 @@
+.about .approach-desktop,
+.about .approach-mobile{
+  background-color: #FFFFFF;
+}
+
+.about .approach-desktop h2 {
+  padding: 40px 0 50px;
+}
+.about .approach-desktop .wrapper {
+  padding: 23px 0 70px;
+}
+.about .nopadding .wrapper{
+  padding-bottom: 0;
+}
+.about .approach-desktop .number {
+  font-family: CircularStd-Book;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  color: #3A342D;
+}
+.about .approach-desktop h3 {
+  font-family: Times-New-Roman;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: #3A342D;
+  margin: 20px 0;
+}
+.about .approach-desktop p {
+  font-family: CircularStd-Book;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  color: #3A342D;
+}
+.about .approach-desktop .wrapper:nth-child(1) p{
+  width: 86%;
+}
+.about .approach-desktop .wrapper:nth-child(2) p{
+  width: 94%;
+}
+.about .approach-desktop .wrapper:nth-child(3) p{
+  width: 101%;
+}
+.about .approach-desktop .wrapper:nth-child(4) p{
+  width: 99%;
+}
+
+/*
+|------------------------------------------------------
+|  presence
+|------------------------------------------------------
+*/
+.presence {
+  background-color: #FDF8F2;
+}
+.presence .row {
+  padding-top: 40px;
+  justify-content: space-between;
+}
+.presence .detail {
+  width: 85%;
+  margin: 40px 0 55px;
+}
+.presence .wrapper {
+  display: flex;
+  align-items: flex-start;
+;
+    align-items: flex-start;
+}
+.presence .circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #A0753B;
+  display: inline-block;
+  margin-right: 20px;
+}
+.presence .circle.black {
+  background-color: #413F3C;
+}
+.presence .btn {
+  margin: 20px 0 43px;
+  padding: 11px 21px;
+}
+.presence .btn:last-child {
+  margin-bottom: 0;
+}
+/*
+|------------------------------------------------------
+|  construction
+|------------------------------------------------------
+*/
+.construction {
+  background-color: #DECEB6;
+}
+.construction > .container > .row .left {
+  height: 717px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.construction .bg-video-container {
+  top: -40%;
+  min-height: 700px;
+}
+.construction .bg-video-container::after {
+  background-color: transparent;
+}
+.construction h3 {
+  width: 90%;
+}
+.construction p {
+  margin-top: 40px;
+  width: 81%;
+}
+.construction .second-para {
+  margin: 35px 0 24px;
+}
+/*
+|------------------------------------------------------
+|  Leadership
+|------------------------------------------------------
+*/
+.leadership {
+  background-color: #FDF8F2;
+}
+.leadership > .row {
+  padding-top: 40px;
+  justify-content: space-between;
+}
+.leadership .row > .left p{
+margin-top: 40px;
+width: 86%;
+}
+.leadership h3 {
+  font-family: Times-New-Roman;
+  font-size: 30px;
+  line-height: 34px;
+  margin: 0;
+}
+.leadership p {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  color: #3A342D;
+  margin-top: 40px;
+  width: 86%;
+}
+.leadership .profession {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: #413F3C;
+  margin-top: 11px;
+}
+.leadership .second-para {
+  margin-top: 30px;
+}
+.leadership .row > .right .row{
+  align-items: center;
+}
+
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+
+  .about .approach-desktop h2 {
+    padding: clamp(0px,2vw,40px) 0 clamp(0px,3vw,50px);
+  }
+  .about .approach-desktop .wrapper {
+    padding: clamp(0px,1.2vw,23px) 0 clamp(0px,3.8vw,70px);
+  }
+  .about .nopadding .wrapper{
+    padding-bottom: 0;
+  }
+  .about .approach-desktop .number {
+    font-size: clamp(0px,1vw,16px);
+    line-height: clamp(0px,1.3vw,22px);
+  }
+  .about .approach-desktop h3 { 
+    font-size: clamp(20px,1.9vw,30px);
+    line-height: clamp(24px,2vw,34px);
+    margin: clamp(0px,1.2vw,20px) 0;
+  }
+  .about .approach-desktop p {
+    font-size: clamp(11px,1vw,16px);
+    line-height: clamp(16px,1.3vw,22px);
+  }
+  /* presence */
+  
+  .presence .row {
+    padding-top: clamp(0px,2vw,40px);
+  }
+  .presence .detail {
+    margin: clamp(0px,2vw,40px) 0 clamp(0px,3vw,55px);
+  }
+  .presence .btn {
+    margin: clamp(0px,1.2vw,20px) 0 clamp(0px,2.5vw,43px);
+  }
+  /* construction */
+  .construction > .container > .row .left {
+    height: clamp(385px,40vw,717px);
+  }
+  .construction p {
+    margin-top: clamp(0px,2vw,40px);
+  }
+  .construction .second-para {
+    margin: clamp(20px,1.8vw,35px) 0 clamp(20px,1.4vw,24px);
+  }
+  /* leadership */
+  .leadership p {
+    margin-top: clamp(0px,2vw,40px);
+  }
+  .leadership .second-para {
+    margin-top: clamp(0px,1.5vw,30px);
+  }
+  .leadership .row > .left p {
+    margin-top: clamp(0px,2vw,40px);
+  }
+  .leadership > .row {
+    padding-top:  clamp(0px,2vw,40px);
+  }
+}
+@media (max-width: 1550px) { 
+  .about .approach-desktop .wrapper:nth-child(2) p{
+    width: 100%;
+  }
+  /* construction */
+  .construction h3{
+    width: 100%;
+  }
+  .construction p {
+    width: 90%;
+  }
+  /* leadership */
+  .leadership .row > .right p {
+    width: 95%;
+  }
+}
+@media (max-width: 1250px) {
+  .leadership .row > .right p{
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .leadership p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 899px) {
+  .construction > .container > .row .left {
+    height: 485px;
+  }
+  .presence .row {
+    padding-top: 20px;
+  }
+  .presence .detail {
+    margin: 40px 0 79px;
+    width: 96%;
+  }
+  .presence img {
+    margin-bottom: 43px;
+  }
+  .presence .btn {
+    margin: 10px 0 33px;
+  }
+  .construction h3 {
+    margin-top: 40px;
+  }
+  .construction p {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .construction .second-para {
+    margin-bottom: 0;
+  }
+  .leadership > .row {
+    padding-top: 20px;
+  }
+  .leadership p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 45px;
+  }
+  .leadership .row > .left p {
+    margin: 40px 0 90px;
+    width: 97%;
+  }
+  .leadership h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 15px;
+  }
+  .leadership .second-para {
+    margin-top: 25px;
+    margin-bottom: 64px;
+  }
+  .leadership .wrapper p {
+    font-size: 16px;
+    line-height: 22px;
+    width: 93%!important;
+  }
+  .leadership .nomargin .second-para{
+    margin-bottom: 0;
+  }
+  .leadership .profession {
+    font-size: 20px!important;
+    line-height: 28px!important;
+  }
+}

@@ -1,0 +1,90 @@
+.privacyPage {
+  background-color: #413F3C;
+  position: relative;
+  z-index: 1;
+}
+.bnr-privacy {
+  padding: 230px 2.6vw 30px;
+}
+.bnr-privacy h1 {
+  margin-bottom: 167px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.bnr-privacy .wrapper {
+  padding-bottom: 75px;
+}
+.bnr-privacy .line-appear {
+  background-color: #FFFFFF;
+  margin-bottom: 40px;
+}
+.bnr-privacy h3{
+  color: #FFFFFF;
+}
+.bnr-privacy p {
+  color: #FFFFFF;
+}
+.bnr-privacy p a{
+  color: #EDB973;
+}
+.bnr-privacy .hasMargin p:not(:last-child) {
+  margin-bottom: 20px;
+
+}
+
+  
+
+/*
+|----------------------------------------------------------------
+| Query media
+|----------------------------------------------------------------
+*/
+
+@media (max-width: 1700px) { 
+  .bnr-privacy {
+    padding: clamp(0px, 14.5vw, 230px) 2.6vw clamp(0px,1.9vw,30px);
+  }
+  .bnr-privacy h1 {
+    margin-bottom: clamp(0px, 10vw, 167px);
+  }
+  .bnr-privacy .wrapper {
+    padding-bottom: clamp(0px,4vw,75px);
+  }
+  .bnr-privacy .line-appear {
+    margin-bottom: clamp(0px,2vw,40px);
+  }
+  .bnr-privacy p{
+    p {
+      line-height: clamp(0px, 2vw, 27px);
+  }
+  }
+}
+@media (max-width: 899px) { 
+  .bnr-privacy {
+    padding: 240px 2.6vw 50px;
+  }
+  .bnr-privacy h1 {
+    margin-bottom: 130px;
+    text-align: left;
+  }
+  .bnr-privacy .line-appear {
+    margin-bottom: 20px;
+  }
+  .bnr-privacy h3 {
+    margin-bottom: 40px;
+    font-size: 46px;
+    line-height: 53px;
+  }
+  .bnr-privacy .wrapper:not(:last-child) {
+    padding-bottom: 64px;
+  }
+  .bnr-privacy .hasMargin p:not(:last-child) {
+    margin-bottom: 40px;
+  
+  }
+}
+@media (max-width: 599px) { 
+  .bnr-privacy {
+    padding: 240px 6vw 50px;
+  }
+}

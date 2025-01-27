@@ -1,0 +1,56 @@
+
+/*
+|------------------------------------------------------
+|  Harlowe-house
+|------------------------------------------------------
+*/
+.Harlowe-house {
+  background-color: #DECEB6;
+}
+.legacy-gallery {
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-color: #FDF8F2;
+}
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  
+.legacy-gallery {
+  padding-top: clamp(0px,9vw,150px);
+  padding-bottom: clamp(0px,13vw,200px);
+  }
+}
+@media (max-width: 899px) {
+  .legacy-gallery {
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
+  .legacy-gallery .wrapper:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 599px) { 
+  .legacy .img-card img {
+    width: auto;
+    height: 440px;
+    position: relative;
+    left: -18%;
+  }
+  .legacy-gallery .wrapper {
+    width: 100%;
+  }
+  .legacy-gallery .img-card img {
+    width: 100%;
+    height: auto;
+    left: 0%;
+
+  }
+  .legacy .img-card {
+    overflow: hidden;
+  }
+
+}
