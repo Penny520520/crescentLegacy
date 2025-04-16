@@ -1,0 +1,140 @@
+.home {
+  position: relative;
+  opacity: 0;
+  z-index: 998;
+}
+/* intro */
+.home .intro .row:last-child{
+  padding-top: 0px!important;
+  border-top: none!important;
+}
+/*
+|------------------------------------------------------
+|  legacy-collections
+|------------------------------------------------------
+*/
+.legacy-collections {
+  background-color: #DECEB6;
+}
+/*
+|------------------------------------------------------
+|  legacy-collections
+|------------------------------------------------------
+*/
+.mixed-use {
+  background-color: #FDF8F2;
+}
+/*
+|------------------------------------------------------
+|  approach
+|------------------------------------------------------
+*/
+.home .approach {
+  background-color: #FFFFFF;
+}
+.home .approach .btn {
+  display: inline-block;
+  margin-top: 40px;
+}
+/*
+|------------------------------------------------------
+|  construction
+|------------------------------------------------------
+*/
+.home .construction {
+  padding: 155px 2.6vw;
+  overflow: hidden;
+}
+.home .construction .bg-video-container {
+  position: absolute;
+  /* top: -40%; */
+}
+.home .construction .cover{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+.home .construction .wrapper{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.home .construction h2 {
+  color: #FFFFFF;
+}
+.home .construction p {
+  width: 42%;
+  color: #FFFFFF;
+  margin: 40px auto 36px;
+}
+.home .construction .btn {
+  background-color: #A0753B;
+  color: #FFFFFF;
+  border: none;
+}
+
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  .home .intro.global-padding {
+    padding-bottom: 150px;
+  }
+  .home .approach .btn {
+    margin-top: clamp(0px,2.5vw,40px);
+  }
+  .home .construction {
+    padding: clamp(0px,9vw,155px) 2.6vw;
+  }
+  .home .construction p { 
+    margin: clamp(0px,2.5vw,40px) auto clamp(0px,2.2vw,36px);
+  }
+}
+
+@media (max-width: 899px) { 
+  .legacy-collections .btn {
+    display: none;
+  }
+  .home .btn-wrapper {
+    text-align: center;
+  }
+  .legacy-collections .btn.mobile {
+    display: inline-block;
+    margin-top: 80px;
+  }
+  .home .approach .btn {
+    margin-top: 80px;
+  }
+  .home .construction {
+    padding: 30px 2.6vw 40px;
+  }
+  .home .construction .wrapper {
+    text-align: left;
+  }
+  .home .construction p {
+    width: 80%;
+    margin: 36px 0 16px;
+  }
+}
+@media (max-width: 599px) { 
+  .home .construction{
+    padding: 30px 6vw 40px;
+  }
+  .home .construction p {
+    width: 96%;
+  }
+}
+@media (max-width: 499px) { 
+  .landing-loader img{
+    width: 90%;
+  }
+}

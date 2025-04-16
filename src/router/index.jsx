@@ -5,6 +5,7 @@ const Root = lazy(() => import("../pages/Root"));
 const Homepage = lazy(() => import("../pages/Homepage"));
 const About = lazy(() => import("../pages/About"));
 const Legacy = lazy(() => import("../pages/Legacy"));
+const LindenHouse = lazy(() => import("../pages/LindenHouse"));
 const MixedUse = lazy(() => import("../pages/MixedUse"));
 const HomeownerCare = lazy(() => import("../pages/HomeownerCare"));
 const Contact = lazy(() => import("../pages/Contact"));
@@ -26,6 +27,10 @@ const routes = [
       {
         path: "/legacy",
         element: <Legacy />,
+      },
+      {
+        path: "/linden-house",
+        element: <LindenHouse />,
       },
       {
         path: "/mixed-use",
