@@ -3,8 +3,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextAppear from "../anime/TextAppear";
 import "./style.css";
+import { Link } from "react-router-dom";
 
-const Banner = ({ posterURL, videoURL, heading }) => {
+const Banner = ({ posterURL, videoURL, heading, isProject }) => {
   const bnrRef = useRef(null);
 
   useEffect(() => {
@@ -42,6 +43,11 @@ const Banner = ({ posterURL, videoURL, heading }) => {
               return <span key={index}>{item}</span>;
             })}
           </h1>
+          {isProject && (
+            <Link to="/linden-house#register" className="btn btn-project-bnr">
+              Register
+            </Link>
+          )}
         </TextAppear>
       </div>
       <div className="line"></div>

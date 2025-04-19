@@ -1,0 +1,82 @@
+.swiper-carousel-project{
+  overflow-x: hidden;
+}
+.swiper-carousel-project .mySwiper {
+  margin-top: 150px;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.swiper-carousel-project .swiper-slide::before {
+  display: none;
+  }
+
+  
+.swiper-carousel-project .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-carousel-project .swiper-slide p {
+  color: #413F3C;
+  margin-top: 24px;
+}
+
+.swiper-carousel-project .swiper-slide {
+  width: 22%;
+}
+/* button */
+.swiper-carousel-project .swiper-button-prev,
+.swiper-carousel-project .swiper-button-next {
+  position: absolute;
+  top: -10%;
+  left: auto!important;
+  right: 2.6vw;
+  width: 70px;
+  height: 26px;
+  border: 1px solid #413F3C;
+  background: transparent;
+  border-radius: 13px;
+
+}
+.swiper-carousel-project .swiper-button-prev:after, .swiper-carousel-project .swiper-button-next:after {
+  color: #413F3C;
+  font-size: 13px;
+}
+.swiper-carousel-project .swiper-button-prev {
+  right: 7vw;
+}
+  
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 1700px) { 
+  .mySwiper {
+    margin-top: clamp(0px,9vw,150px);
+  }
+  .swiper-carousel-project .swiper-button-prev {
+    right: 9vw;
+  }
+}
+@media (max-width: 1200px) { 
+  .swiper-carousel-project .swiper-button-prev {
+    right: 11vw;
+  }
+}
+@media (max-width: 899px) { 
+  .mySwiper{
+    margin-top: 136px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    top: -32px;
+  }
+}
+@media (max-width: 599px) { 
+  .swiper-slide {
+    width: 80%!important;
+  }
+}

@@ -1,84 +1,92 @@
-.home {
+
+.linden-house .global-padding {
+  padding: 150px 0 0 2.6vw;
+}
+
+.bg-video-container::after {
+  background-color: rgba(58, 52, 45, 0.5);
+}
+
+.linden-house .intro-container {
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.linden-house .projects-data {
+  margin-right: 2.6vw;
+}
+.linden-house .projects-data .wrapper {
+  width: 100%;
+}
+
+.linden-house .projects-data .heading {
+  margin:24px 0 40px;
+}
+.linden-house .projects-data .detail {
+  font-family: Times-New-Roman;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: #413F3C;
+
+}
+
+/* location */
+.location-container .project-intro .row{
+  flex-direction: column;
+}
+.location-container.global-padding {
+  padding-top: 100px;
+}
+.location-container h2 {
+  margin-bottom: 40px;
+}
+.location-container .project-intro p {
+  width: 85%;
+}
+
+/* formwerks-architecture */
+.formwerks-architecture img {
+  margin-top: 87px;
+  padding-right: 2.6vw;
+}
+
+
+.linden-house .space .swiper-carousel-project {
   position: relative;
-  opacity: 0;
-  z-index: 998;
+  top: -100px;
 }
-/* intro */
-.home .intro .row:last-child{
-  padding-top: 0px!important;
-  border-top: none!important;
+.linden-house .space.global-padding {
+  margin-bottom: -100px;
 }
-/*
-|------------------------------------------------------
-|  legacy-collections
-|------------------------------------------------------
-*/
-.legacy-collections {
+.linden-house .exterior.space {
+margin-bottom: 0;
+}
+.linden-house .space .swiper-carousel-project .swiper-slide {
+  width: auto;
+}
+.linden-house .space .swiper-carousel-project .swiper-slide img {
+  height: 550px;
+}
+
+/* register */
+.linden-house .register-section {
   background-color: #DECEB6;
+  padding: 100px 2.6vw;
 }
-/*
-|------------------------------------------------------
-|  legacy-collections
-|------------------------------------------------------
-*/
-.mixed-use {
-  background-color: #FDF8F2;
+.linden-house .register-section h2{
+  margin-bottom: 40px;
 }
-/*
-|------------------------------------------------------
-|  approach
-|------------------------------------------------------
-*/
-.home .approach {
-  background-color: #FFFFFF;
-}
-.home .approach .btn {
-  display: inline-block;
-  margin-top: 40px;
-}
-/*
-|------------------------------------------------------
-|  construction
-|------------------------------------------------------
-*/
-.home .construction {
-  padding: 155px 2.6vw;
-  overflow: hidden;
-}
-.home .construction .bg-video-container {
-  position: absolute;
-  /* top: -40%; */
-}
-.home .construction .cover{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #000000;
-  opacity: 0.5;
-  mix-blend-mode: multiply;
-  z-index: 1;
-}
-.home .construction .wrapper{
-  position: relative;
-  z-index: 2;
+
+.linden-house .backto-allprojects {
   text-align: center;
 }
-.home .construction h2 {
-  color: #FFFFFF;
+.linden-house .backto-allprojects .btn {
+  margin: 150px 0;
+  padding: 13px 48px;
 }
-.home .construction p {
-  width: 42%;
-  color: #FFFFFF;
-  margin: 40px auto 36px;
-}
-.home .construction .btn {
-  background-color: #A0753B;
-  color: #FFFFFF;
-  border: none;
-}
+
+
 
 /*
 |------------------------------------------------------
@@ -86,55 +94,8 @@
 |------------------------------------------------------
 */
 @media (max-width: 1700px) { 
-  .home .intro.global-padding {
-    padding-bottom: 150px;
-  }
-  .home .approach .btn {
-    margin-top: clamp(0px,2.5vw,40px);
-  }
-  .home .construction {
-    padding: clamp(0px,9vw,155px) 2.6vw;
-  }
-  .home .construction p { 
-    margin: clamp(0px,2.5vw,40px) auto clamp(0px,2.2vw,36px);
-  }
+.linden-house .projects-data .detail {
+  font-size: clamp(0px,1.7vw,30px);
+  line-height: clamp(0px,2.2vw,34px);
 }
-
-@media (max-width: 899px) { 
-  .legacy-collections .btn {
-    display: none;
-  }
-  .home .btn-wrapper {
-    text-align: center;
-  }
-  .legacy-collections .btn.mobile {
-    display: inline-block;
-    margin-top: 80px;
-  }
-  .home .approach .btn {
-    margin-top: 80px;
-  }
-  .home .construction {
-    padding: 30px 2.6vw 40px;
-  }
-  .home .construction .wrapper {
-    text-align: left;
-  }
-  .home .construction p {
-    width: 80%;
-    margin: 36px 0 16px;
-  }
-}
-@media (max-width: 599px) { 
-  .home .construction{
-    padding: 30px 6vw 40px;
-  }
-  .home .construction p {
-    width: 96%;
-  }
-}
-@media (max-width: 499px) { 
-  .landing-loader img{
-    width: 90%;
-  }
 }

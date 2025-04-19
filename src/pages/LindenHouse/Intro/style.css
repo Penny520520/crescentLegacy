@@ -1,0 +1,21 @@
+.project-intro {
+  background-color: transparent;
+  padding-right: 2.6vw;
+}
+.project-intro .num {
+  font-family: CircularStd-Book;
+  font-size: 36px;
+  line-height: 48px;
+  color: #413F3C;
+  margin: 37px 0 0;
+  font-weight: bold;
+}
+.project-intro .row {
+  padding-top: 21px !important;
+}
+.project-intro p {
+  margin: 0 0 40px;
+}
+.project-intro p:last-child {
+  margin-bottom: 0px;
+}

@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import LandingAnimate from "../../components/LandingAnimate";
-import Banner from "../../components/Banner";
+import Banner from "./Banner";
 import TextImg from "../../components/TextImg";
-import SwiperCarousel from "../../components/SwiperCarousel";
+import Intro from "./Intro";
+import Location from "./Location";
+import SwiperCarousel from "./SwiperCarousel";
 import CustomizedAccordions from "../../components/Accordion";
-import RegisterForm from "../../components/RegisterForm";
-import { legacyProjects } from "../../components/Data";
+import {
+  locationImgs,
+  exteriorImgs,
+  interiorImgs,
+} from "../../components/Data";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -16,10 +20,12 @@ import TextAppear from "../../components/anime/TextAppear";
 import NumAppear from "../../components/anime/NumAppear";
 import LineAppear from "../../components/anime/LineAppear";
 import "./style.css";
+import RegisterForm from "./RegisterForm";
 
 const LindenHouse = () => {
   const [matches, setMatches] = useState(false);
   const [matches599, setMatches599] = useState(false);
+  const [matches1700, setMatches1700] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,29 +35,24 @@ const LindenHouse = () => {
     if (window.matchMedia("(max-width: 599px)").matches) {
       setMatches599(true);
     }
+    if (window.matchMedia("(max-width: 1700px)").matches) {
+      setMatches1700(true);
+    }
     gsap.registerPlugin(ScrollTrigger);
-    let ctx = gsap.context(() => {
-      gsap.to(".home", {
-        opacity: 1,
-        ease: "power2.easeOut",
-        delay: 1,
-        duration: 0.8,
-      });
-    });
+    let ctx = gsap.context(() => {});
     return () => ctx.revert();
   }, [location.pathname, matches]);
   return (
     <ReactLenis root options={{ smoothTouch: true }}>
-      <LandingAnimate />
-      <main className="home">
+      <main className="linden-house">
         <Banner
-          posterURL="/videos/home.jpg"
-          videoURL="/videos/home.mp4"
+          url="/images/linden-house/bnr.jpg"
           heading={
             matches599
               ? ["Linden House | Shaughnessy"]
               : ["Linden House | Shaughnessy"]
           }
+          isProject={true}
         />
         <div
           style={{
@@ -61,184 +62,154 @@ const LindenHouse = () => {
             backgroundColor: "#FFFDF6",
           }}
         >
-          <Box sx={{ flexGrow: 1 }} className="intro global-padding">
-            <LineAppear>
-              <div className="line-appear"></div>
-            </LineAppear>
-            <Grid container className="row">
-              <Grid size={{ sm: 6 }}>
-                <TextAppear>
-                  <h2>About Us</h2>
-                </TextAppear>
-              </Grid>
-              <Grid size={{ sm: 6 }}>
-                <h3>
-                  As a leading Vancouver real estate developer, Crescent Legacy
-                  is creating a new standard of high-quality homes that provide
-                  optimal value to homeowners and transform urban communities.
-                </h3>
-                <Link to="/about" className="btn">
-                  Our Story
-                </Link>
-              </Grid>
-            </Grid>
-            <Grid container className="row projects-data">
-              <Grid size={{ xs: 12, sm: 6 }}>
+          <Box sx={{ flexGrow: 1 }} className="intro-container global-padding">
+            <Intro
+              num="01"
+              heading={["Your Legacy of Luxury", "in Shaughnessy."]}
+              description={[
+                "Designed in partnership with Formwerks Architecture, Linden House embodies European elegance with contemporary sophistication. Its timeless design features a grand façade, classic brickwork, and refined architectural detailing, seamlessly blending traditional charm with modern refinement. Nestled in Vancouver’s prestigious Shaughnessy neighborhood, Linden House stands as a distinguished landmark, harmonizing effortlessly with its historic tree-lined surroundings—a true expression of luxury built on legacy.",
+                "Stroll through tree-lined boulevards where heritage homes and manicured gardens whisper of enduring elegance. Just moments from your doorstep, discover a world of gourmet dining, designer boutiques, and refined amenities that define Vancouver’s most coveted lifestyle. Prestigious private schools—including York House, Little Flower Academy, and Vancouver College—are within close reach, with the University of British Columbia a short drive away. At Linden House, tranquil parkside living meets urban vibrancy, offering a rare and distinguished lifestyle where elegance, convenience, and prestige exist in perfect harmony.",
+              ]}
+            />
+            <Grid
+              container
+              className="row projects-data"
+              spacing={{ md: 5, xl: 10 }}
+              columns={12}
+            >
+              <Grid size={{ xs: 12, sm: 2.4 }}>
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Now Selling Projects</div>
-                  <Grid container className="row">
-                    <Grid size={{ sm: 3 }}>
-                      <NumAppear>
-                        <div className="num">5</div>
-                      </NumAppear>
-                      <div className="subtitle">Projects</div>
-                    </Grid>
-                    <Grid size={{ sm: 4 }}>
-                      <NumAppear>
-                        <div className="num">56</div>
-                      </NumAppear>
-                      <div className="subtitle">Units</div>
-                    </Grid>
-                    <Grid size={{ sm: 5 }}>
-                      <NumAppear>
-                        <div className="num">84,829</div>
-                      </NumAppear>
-                      <div className="subtitle">Total SQFT</div>
-                    </Grid>
-                  </Grid>
+                  <div className="heading">Status</div>
+                  <div className="detail">Coming Soon</div>
                 </div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 6 }} className="right">
+              <Grid size={{ xs: 12, sm: 2.4 }}>
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Upcoming Projects</div>
-                  <Grid container className="row">
-                    <Grid size={{ sm: 3 }}>
-                      <NumAppear>
-                        <div className="num">4</div>
-                      </NumAppear>
-                      <div className="subtitle">Projects</div>
-                    </Grid>
-                    <Grid size={{ sm: 4 }}>
-                      <NumAppear>
-                        <div className="num">15</div>
-                      </NumAppear>
-                      <div className="subtitle">Units</div>
-                    </Grid>
-                    <Grid size={{ sm: 5 }}>
-                      <NumAppear>
-                        <div className="num">51,827</div>
-                      </NumAppear>
-                      <div className="subtitle">Total SQFT</div>
-                    </Grid>
-                  </Grid>
+                  <div className="heading">Address</div>
+                  <div className="detail">
+                    4450 Maple Crescent, Vancouver, BC
+                  </div>
+                </div>
+              </Grid>
+              <Grid size={{ xs: 12, sm: 2.4 }}>
+                <div className="wrapper">
+                  <LineAppear>
+                    <div className="line-appear"></div>
+                  </LineAppear>
+                  <div className="heading">Project Completion</div>
+                  <div className="detail">Fall 2027</div>
+                </div>
+              </Grid>
+              <Grid size={{ xs: 12, sm: 2.4 }}>
+                <div className="wrapper">
+                  <LineAppear>
+                    <div className="line-appear"></div>
+                  </LineAppear>
+                  <div className="heading">Unit Type</div>
+                  <div className="detail">3 - 4 Bedroom</div>
+                </div>
+              </Grid>
+              <Grid size={{ xs: 12, sm: 2.4 }}>
+                <div className="wrapper">
+                  <LineAppear>
+                    <div className="line-appear"></div>
+                  </LineAppear>
+                  <div className="heading">Project Website</div>
+                  <Link to="/" className="btn ">
+                    Visit Website
+                  </Link>
                 </div>
               </Grid>
             </Grid>
           </Box>
+          <div style={{ backgroundColor: "#FDF8F2" }}>
+            <Box
+              sx={{ flexGrow: 1 }}
+              className="location-container global-padding"
+            >
+              <Intro
+                num="02"
+                heading={["Location"]}
+                description={[
+                  "Set within Shaughnessy, Vancouver’s most coveted and historically rich neighborhood, Linden House embodies an unparalleled blend of heritage charm and modern refinement, offering an exclusive sanctuary of elegance.",
+                ]}
+              />
+              <Location />
+              <SwiperCarousel projects={locationImgs} initialIndex="1" />
+              <div className="btn-wrapper">
+                {matches ? (
+                  <Link to="/legacy" className="btn mobile">
+                    View All Legacy Projects
+                  </Link>
+                ) : null}
+              </div>
+            </Box>
+            <Box
+              sx={{ flexGrow: 1 }}
+              className="formwerks-architecture global-padding"
+            >
+              <Intro
+                num="03"
+                heading={
+                  matches1700
+                    ? ["Sophisticated European Charm,Contemporary Elegance."]
+                    : [
+                        "Sophisticated European Charm,",
+                        "Contemporary Elegance.",
+                      ]
+                }
+                description={[
+                  "Designed in partnership with Formwerks Architecture, Linden House embodies European elegance with contemporary sophistication. Its timeless design features a grand façade, classic brickwork, and refined architectural detailing, seamlessly blending traditional charm with modern refinement. Nestled in Vancouver’s prestigious Shaughnessy neighborhood, Linden House stands as a distinguished landmark, harmonizing effortlessly with its historic tree-lined surroundings—a true expression of luxury built on legacy.",
+                ]}
+              />
+              <img
+                src="/images/linden-house/architecture.jpg"
+                alt="Formwerks Architecture"
+              />
+            </Box>
+            <Box sx={{ flexGrow: 1 }} className="space global-padding">
+              <Intro num="04" heading={["Exterior"]} />
+              <SwiperCarousel projects={exteriorImgs} initialIndex="1" />
+            </Box>
+            <Box sx={{ flexGrow: 1 }} className="exterior space global-padding">
+              <Intro num="05" heading={["Interior"]} />
+              <SwiperCarousel projects={interiorImgs} initialIndex="1" />
+            </Box>
+          </div>
           <Box
             sx={{ flexGrow: 1 }}
-            className="legacy-collections global-padding"
+            className="register-section project-intro  imgtext global-padding"
+            id="register"
           >
-            <TextImg
-              heading={["Legacy", "Collections"]}
-              description="At Crescent Legacy, our passion is bringing value to the communities we love. That’s why we are proud to offer the Legacy Collection: a unique collection of heritage-inspired homes throughout the Lower Mainland."
-              btnRoute="/legacy"
-              btnNewTab="0"
-              btnContent="View All Legacy Projects"
-              newTab="1"
-              route="https://harlowehouse.ca/"
-              imgPath="/images/home/Harlowe.jpg"
-              sellStatus="Now Selling"
-              title="Harlowe House"
-              location="Vancouver | West Side"
-            />
-            <SwiperCarousel projects={legacyProjects} initialIndex="1" />
-            <div className="btn-wrapper">
-              {matches ? (
-                <Link to="/legacy" className="btn mobile">
-                  View All Legacy Projects
-                </Link>
-              ) : null}
-            </div>
-          </Box>
-          <Box sx={{ flexGrow: 1 }} className="mixed-use global-padding">
-            <TextImg
-              heading={["Mixed-Use", "Developments"]}
-              description="At Crescent Legacy, we don’t just build homes, we build communities. With this in mind, all of our multi-family communities are founded on principles of quality design aimed to enrich the lives of both residents and neighbours alike."
-              btnRoute="/mixed-use"
-              btnContent="View All Mixed-Use Projects"
-              newTab="1"
-              route="https://ownava.com/"
-              imgPath="/images/home/Ava-hero.jpg"
-              sellStatus="75% Sold"
-              title="Ava"
-              location="Vancouver | West Side"
-            />
-          </Box>
-          <Box sx={{ flexGrow: 1 }} className="approach imgtext global-padding">
             <LineAppear>
               <div className="line-appear"></div>
             </LineAppear>
-            <div className="container">
-              <TextAppear>
-                <h2>Our Approach</h2>
-              </TextAppear>
-              <Grid container className="row">
-                <Grid size={{ md: 4 }}>
-                  <img src="/images/home/approach.jpg" alt="our approach" />
-                </Grid>
-                <Grid size={{ md: 6 }} className="right">
-                  <CustomizedAccordions />
-                  <div className="btn-wrapper">
-                    <Link to="/about" className="btn">
-                      Learn More
-                    </Link>
-                  </div>
-                </Grid>
+            <div className="num">06</div>
+            <Grid container className="row">
+              <Grid size={{ md: 3.3 }} className="left">
+                <TextAppear>
+                  <h2>Register</h2>
+                  <p>
+                    By registering, you will be among the first to receive the
+                    latest news, exclusive offers and community updates.
+                  </p>
+                </TextAppear>
               </Grid>
-            </div>
+              <Grid size={{ md: 7 }}>
+                <RegisterForm />
+              </Grid>
+            </Grid>
           </Box>
-          <div className="construction is-relative">
-            <div className="bg-video-container">
-              <video
-                className="bg-video"
-                poster="/videos/construction.jpg"
-                preload="metadata"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/videos/construction.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div className="wrapper">
-              <TextAppear>
-                {matches ? (
-                  <h2>
-                    Construction <br /> Service
-                  </h2>
-                ) : (
-                  <h2>Construction Service</h2>
-                )}
-                <p>
-                  From multiple conversion dwellings to boutique heritage-home
-                  restoration, we offer a wide range of project management and
-                  construction services. No matter what the scope, we’ll partner
-                  with you and provide comprehensive services to help envision,
-                  plan and execute your project to perfection.
-                </p>
-                <Link to="/about" className="btn">
-                  Learn More
-                </Link>
-              </TextAppear>
-            </div>
+          <div className="backto-allprojects">
+            <Link to="/legacy" className="btn ">
+              Back To All Projects
+            </Link>
           </div>
         </div>
       </main>

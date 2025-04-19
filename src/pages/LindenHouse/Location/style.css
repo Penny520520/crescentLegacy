@@ -1,0 +1,126 @@
+
+.location-section {
+  margin-top: 50px;
+}
+/* map */
+.location-section .map img{
+  width: 100%;
+  height: auto;
+}
+.location-section .map .active-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* accordion */
+.location-section .MuiAccordionSummary-content,
+.location-section .MuiAccordionSummary-content.Mui-expanded {
+  margin: 20px 0!important;
+}
+.location-section .MuiAccordionDetails-root {
+  padding: 0 0 26px !important;
+}
+.location-section .MuiAccordionDetails-root p {
+  font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 3px;
+}
+
+/* location direction */
+.location-section .details li {
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+.location-section .arrow-icon {
+  width: 19.49px;
+  height: 18.45px;
+  margin-right: 7.8px;
+}
+.location-section .details li:nth-child(2) .arrow-icon {
+  transform: rotate(-90deg);
+}
+.location-section .details li:nth-child(3) .arrow-icon {
+  transform: rotate(-135deg);
+}
+.location-section .details li:nth-child(4) .arrow-icon {
+  transform: rotate(180deg);
+}
+.location-section .details li:nth-child(5) .arrow-icon {
+  transform: rotate(90deg);
+}
+.location-section .min-num {
+  margin-top: -10px;
+}
+.location-section h3 {
+  color: #1E2F31;
+}
+.location-section .min {
+  font-family: CircularStd-Book;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  margin-left: 8px;
+  color: #1E2F31;
+}
+.location-section .location {
+  display: block;
+  font-family: CircularStd-Book;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: none;
+  color: #1E2F31;
+}
+/*
+|----------------------------------------------------------------
+| Query media
+|----------------------------------------------------------------
+*/
+@media (max-width: 1880px) {
+  .location .map img {
+    min-height: 800px;
+  }
+}
+@media (max-width: 1700px) {
+}
+@media (max-width: 1500px) {
+  .location .map img {
+    min-height: 700px;
+    height: auto;
+  }
+}
+@media (max-width: 1400px) {
+  .location p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1400px) {
+  .location .map img {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .location .row .map {
+    padding-left: 0vw!important;
+  }
+  .location .row .left {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .location {
+    padding-left: 0vw!important;
+    padding-right: 0vw!important;
+  }
+  .location p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

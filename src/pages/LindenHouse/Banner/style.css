@@ -2,7 +2,7 @@
 .banner {
   z-index: 1;
 }
-.bg-video-container {
+.bg-container {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -10,6 +10,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .bg-video {
   object-fit: cover;
@@ -64,6 +68,20 @@
   line-height: 20px;
   color: #000000;
   margin-top: 30px;
+}
+
+.btn-project-bnr.circle {
+  position: fixed;
+  top: 125px;
+  right: 2.6vw;
+  z-index: 999;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*
 |----------------------------------------------------------------
