@@ -48,7 +48,7 @@ const Banner = ({ url, heading, isProject }) => {
               })}
             </h1>
             {isProject && (
-              <Link to="/linden-house#register" className="btn btn-project-bnr">
+              <Link to="#register" className="btn btn-project-bnr">
                 Register
               </Link>
             )}
@@ -58,10 +58,7 @@ const Banner = ({ url, heading, isProject }) => {
       </div>
       {hasScolled && (
         <FadeDown>
-          <Link
-            to="/linden-house#register"
-            className="btn btn-project-bnr circle"
-          >
+          <Link to="#register" className="btn btn-project-bnr circle">
             Register
           </Link>
         </FadeDown>
