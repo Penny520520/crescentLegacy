@@ -44,7 +44,7 @@ const Location = () => {
             <Grid size={{ sm: 9 }}>
               <div className="map is-relative">
                 <img
-                  src="../images/linden-house/location/map/Linden House_Map_base.png"
+                  src="../images/linden-house/location/map/Linden House_Map_Base.png"
                   alt="Shannon Lynn_Map"
                 />
                 <img
