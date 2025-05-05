@@ -6,6 +6,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import "./style.css";
 
 const CustomForm = ({ status, message, onValidated }) => {
+  const navigate = useNavigate();
   const options = [
     {
       value: "Signage",
@@ -64,13 +65,13 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   const [formData, setFormData] = useState({
     email: null,
-    tags: 7215988,
+    tags: 7216375,
     fname: null,
     lname: null,
     phone: null,
+    city: null,
     postalCode: null,
     hearus: null,
-    community: "Select",
     realtorStatus: null,
     allowContact: "No",
   });
@@ -124,12 +125,13 @@ const CustomForm = ({ status, message, onValidated }) => {
         fname: null,
         lname: null,
         phone: null,
+        city: null,
         postalCode: null,
         hearus: null,
-        community: "Select",
         IamRealtor: null,
         allowContact: "No",
       });
+      navigate("/thankyou");
     }
   }, [status]);
 
@@ -141,9 +143,9 @@ const CustomForm = ({ status, message, onValidated }) => {
       formData.fname &&
       formData.lname &&
       formData.phone &&
+      formData.city &&
       formData.postalCode &&
       formData.hearus &&
-      formData.community &&
       formData.realtorStatus &&
       //formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
@@ -153,9 +155,9 @@ const CustomForm = ({ status, message, onValidated }) => {
         MERGE1: formData.fname,
         MERGE2: formData.lname,
         MERGE4: formData.phone,
+        MERGE12: formData.city,
         MMERGE9: formData.postalCode,
         MMERGE10: formData.hearus,
-        MMERGE8: formData.community,
         MMERGE11: formData.realtorStatus,
       });
   };
@@ -321,13 +323,13 @@ const CustomForm = ({ status, message, onValidated }) => {
         </button>
       </form>
       <div className="message">
-        {status === "success" ? (
+        {/* {status === "success" ? (
           <div className="signup-message">
             Thank you for contacting us!
             <br />
             We will be in touch with you shortly.
           </div>
-        ) : null}
+        ) : null} */}
         {status === "error" ? <div className="error">{message}</div> : null}
       </div>
     </div>

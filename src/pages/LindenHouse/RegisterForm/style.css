@@ -204,8 +204,8 @@
   .form .registerSelect,
   .form .registerSelect > div,
   .form .agreement{
-    font-size: clamp(13px,1vw,18px);
-    line-height: clamp(20px,1.4vw,26px);
+    font-size: clamp(15px,1.2vw,20px);
+    line-height: clamp(22px,1.5vw,28px);
   }
   .form .wrapper.checkbox-contianer {
     margin-bottom: clamp(0px,3vw,49px);
@@ -215,6 +215,9 @@
 @media (max-width: 1270px) { 
   .register-form-contact .wrapper {
     width: 100%!important;
+  }
+  .form .checkbox-wrapper {
+    width: 100%;
   }
 
 }
@@ -246,7 +249,7 @@
 }
 @media (max-width: 500px) {
   .form .checkbox-wrapper {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .form .checkbox {
     width: 25px!important;
@@ -260,7 +263,7 @@
   .form .agreement {
     font-size: 12px;
     line-height: 24px;
-    width: 110%;
+    /* width: 110%; */
   }
   .form .checkbox-wrapper {
     width: 100%;

@@ -12,7 +12,7 @@ const Intro = ({ num, heading, description }) => {
       </LineAppear>
       <div className="num">{num}</div>
       <Grid container className="row">
-        <Grid size={{ sm: 6 }}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <TextAppear>
             <h2>
               {heading.map((item, index) => (
@@ -21,7 +21,7 @@ const Intro = ({ num, heading, description }) => {
             </h2>
           </TextAppear>
         </Grid>
-        <Grid size={{ sm: 6 }}>
+        <Grid size={{ xs: 12, md: 6 }} className="description">
           {description &&
             description.map((item, index) => <p key={index}>{item}</p>)}
         </Grid>

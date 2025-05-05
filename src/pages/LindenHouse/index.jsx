@@ -47,11 +47,7 @@ const LindenHouse = () => {
       <main className="linden-house">
         <Banner
           url="/images/linden-house/bnr.jpg"
-          heading={
-            matches599
-              ? ["Linden House | Shaughnessy"]
-              : ["Linden House | Shaughnessy"]
-          }
+          heading={["Linden House | Shaughnessy"]}
           isProject={true}
         />
         <div
@@ -65,65 +61,118 @@ const LindenHouse = () => {
           <Box sx={{ flexGrow: 1 }} className="intro-container global-padding">
             <Intro
               num="01"
-              heading={["Your Legacy of Luxury", "in Shaughnessy."]}
+              heading={
+                matches599
+                  ? ["Your Legacy of Luxury in Shaughnessy."]
+                  : ["Your Legacy of Luxury", "in Shaughnessy."]
+              }
               description={[
-                "Designed in partnership with Formwerks Architecture, Linden House embodies European elegance with contemporary sophistication. Its timeless design features a grand façade, classic brickwork, and refined architectural detailing, seamlessly blending traditional charm with modern refinement. Nestled in Vancouver’s prestigious Shaughnessy neighborhood, Linden House stands as a distinguished landmark, harmonizing effortlessly with its historic tree-lined surroundings—a true expression of luxury built on legacy.",
+                "An exclusive collection of 6 impeccably designed multiplex residences, Linden House embodies the grace of timeless European architecture fused with contemporary sophistication—set in the heart of Shaughnessy, Vancouver’s most prestigious and storied neighbourhood.",
                 "Stroll through tree-lined boulevards where heritage homes and manicured gardens whisper of enduring elegance. Just moments from your doorstep, discover a world of gourmet dining, designer boutiques, and refined amenities that define Vancouver’s most coveted lifestyle. Prestigious private schools—including York House, Little Flower Academy, and Vancouver College—are within close reach, with the University of British Columbia a short drive away. At Linden House, tranquil parkside living meets urban vibrancy, offering a rare and distinguished lifestyle where elegance, convenience, and prestige exist in perfect harmony.",
               ]}
             />
             <Grid
               container
               className="row projects-data"
-              spacing={{ md: 5, xl: 10 }}
+              spacing={{ xs: 0, md: 10, lg: 10 }}
               columns={12}
             >
-              <Grid size={{ xs: 12, sm: 2.4 }}>
+              <Grid
+                size={{ xs: 12, sm: 12, md: 3.5, lg: 2.4 }}
+                className="container-wrapper"
+              >
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Status</div>
-                  <div className="detail">Coming Soon</div>
+                  <Grid container className="content-wrapper">
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="heading">Status</div>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="detail">Coming Soon</div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 2.4 }}>
+              <Grid
+                size={{ xs: 12, sm: 12, md: 3.5, lg: 2.4 }}
+                className="container-wrapper"
+              >
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Address</div>
-                  <div className="detail">
-                    4450 Maple Crescent, Vancouver, BC
-                  </div>
+                  <Grid container className="content-wrapper">
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="heading">Address</div>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="detail">
+                        4450 Maple Crescent, Vancouver, BC
+                      </div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 2.4 }}>
+              <Grid
+                size={{ xs: 12, sm: 12, md: 3.5, lg: 2.4 }}
+                className="container-wrapper"
+              >
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Project Completion</div>
-                  <div className="detail">Fall 2027</div>
+                  <Grid container className="content-wrapper">
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="heading">
+                        {matches599 ? "Completion" : "Project Completion"}
+                      </div>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="detail">Fall 2027</div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 2.4 }}>
+              <Grid
+                size={{ xs: 12, sm: 12, md: 3.5, lg: 2.4 }}
+                className="container-wrapper"
+              >
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Unit Type</div>
-                  <div className="detail">3 - 4 Bedroom</div>
+                  <Grid container className="content-wrapper">
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="heading">Unit Type</div>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="detail">3 - 4 Bedroom</div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 2.4 }}>
+              <Grid
+                size={{ xs: 12, sm: 12, md: 3.5, lg: 2.4 }}
+                className="container-wrapper"
+              >
                 <div className="wrapper">
                   <LineAppear>
                     <div className="line-appear"></div>
                   </LineAppear>
-                  <div className="heading">Project Website</div>
-                  <Link to="/" className="btn ">
-                    Visit Website
-                  </Link>
+                  <Grid container className="content-wrapper">
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <div className="heading">
+                        Project {matches599 ? <br /> : null}Website
+                      </div>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 12 }}>
+                      <Link to="/" className="btn ">
+                        Visit Website
+                      </Link>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
             </Grid>
@@ -142,13 +191,13 @@ const LindenHouse = () => {
               />
               <Location />
               <SwiperCarousel projects={locationImgs} initialIndex="1" />
-              <div className="btn-wrapper">
+              {/* <div className="btn-wrapper">
                 {matches ? (
                   <Link to="/legacy" className="btn mobile">
                     View All Legacy Projects
                   </Link>
                 ) : null}
-              </div>
+              </div> */}
             </Box>
             <Box
               sx={{ flexGrow: 1 }}
@@ -158,7 +207,12 @@ const LindenHouse = () => {
                 num="03"
                 heading={
                   matches1700
-                    ? ["Sophisticated European Charm,Contemporary Elegance."]
+                    ? matches599
+                      ? [
+                          "Sophisticated European Charm,",
+                          "Contemporary Elegance.",
+                        ]
+                      : ["Sophisticated European Charm, Contemporary Elegance."]
                     : [
                         "Sophisticated European Charm,",
                         "Contemporary Elegance.",

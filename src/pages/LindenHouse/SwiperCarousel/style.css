@@ -74,9 +74,29 @@
   .swiper-button-prev, .swiper-button-next {
     top: -32px;
   }
+  
+.swiper-carousel-project .swiper-slide {
+  width: 29%;
+}
+.swiper-carousel-project .swiper-button-prev {
+  right: 15vw;
+}
 }
 @media (max-width: 599px) { 
   .swiper-slide {
-    width: 80%!important;
+    width: 78%!important;
+  }  
+  .swiper-carousel-project .swiper-button-prev {
+    right: 20vw;
   }
+  .swiper-carousel-project .swiper-button-prev,
+  .swiper-carousel-project .swiper-button-next {
+    top: -8%;
+  }
+}
+@media (max-width: 499px) { 
+  .swiper-carousel-project .swiper-button-prev {
+    right: 23vw;
+  }
+
 }

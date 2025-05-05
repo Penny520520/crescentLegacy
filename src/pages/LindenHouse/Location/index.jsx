@@ -5,8 +5,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import "./style.css";
 import Grid from "@mui/material/Grid2";
+import "./style.css";
 
 const Location = () => {
   const [expanded, setExpanded] = useState("panel1");
@@ -38,10 +38,14 @@ const Location = () => {
 
   return (
     <section className="location-section">
-      <Grid container className="row" spacing={16}>
-        <Grid size={{ sm: 7.5 }}>
-          <Grid container className="row" spacing={5}>
-            <Grid size={{ sm: 9 }}>
+      <Grid
+        container
+        className="row"
+        spacing={{ xs: 0, sm: 0, md: 13, lg: 16 }}
+      >
+        <Grid size={{ md: 7.5 }}>
+          <Grid container className="row" spacing={{ sm: 2, md: 3, lg: 5 }}>
+            <Grid size={{ sm: 8, md: 9 }}>
               <div className="map is-relative">
                 <img
                   src="../images/linden-house/location/map/Linden House_Map_Base.png"
@@ -54,7 +58,7 @@ const Location = () => {
                 />
               </div>
             </Grid>
-            <Grid size={{ sm: 3 }}>
+            <Grid size={{ sm: 4, md: 3 }}>
               <ul className="details desktop-map-details">
                 <li className="detail-wrapper is-flex">
                   <img
@@ -135,7 +139,10 @@ const Location = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid size={{ sm: 4, lg: 3.3 }}>
+        <Grid
+          size={{ xs: 12, sm: 12, md: 4, lg: 3.3 }}
+          className="accordion-container"
+        >
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}

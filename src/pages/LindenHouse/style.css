@@ -86,6 +86,24 @@ margin-bottom: 0;
   padding: 13px 48px;
 }
 
+/* register form */
+
+.linden-house .form label,
+.linden-house .form .wrapper > input,
+.linden-house .form .selectPlaceholderText,
+.linden-house .radio-wrapper label,
+.linden-house .form textarea,
+.linden-house .form .registerSelect,
+.linden-house .form .registerSelect > div {
+  font-size: 20px;
+  line-height: 28px;
+}
+.linden-house .form .agreement {
+  font-size: 18px;
+  line-height: 26px;
+
+}
+
 
 
 /*
@@ -94,8 +112,116 @@ margin-bottom: 0;
 |------------------------------------------------------
 */
 @media (max-width: 1700px) { 
+  .linden-house h2 {
+    font-size: clamp(43px, 4vw, 64px);
+    line-height: clamp(51px, 4.5vw, 74px);
+  }
 .linden-house .projects-data .detail {
-  font-size: clamp(0px,1.7vw,30px);
-  line-height: clamp(0px,2.2vw,34px);
+  font-size: clamp(20px,1.7vw,30px);
+  line-height: clamp(22px,2.2vw,34px);
 }
+.linden-house .location-container h3{
+  font-size: 48px;
+  line-height: 56px;
+}
+.linden-house .location-section .location {
+  font-size: 19px;
+  line-height: 26px;
+}
+.linden-house .submit-btn {
+  font-size: 16px;
+  line-height: 15px;
+}
+}
+
+
+@media (max-width: 899px) { 
+  .linden-house .projects-data .heading {
+    margin: 0;
+  }
+  .linden-house .content-wrapper {
+    margin: 20px 0 30px;
+  }
+  .linden-house .projects-data .container-wrapper {
+    width: 100%;
+  }
+  .linden-house .register-form {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 599px) { 
+.linden-house h2 {
+  font-size: 46px;
+  line-height: 53px;
+}
+.linden-house .global-padding {
+  padding-left: 6vw;
+  padding-top: 120px;
+}
+.linden-house .project-intro,
+.linden-house .projects-data {
+  padding-right: 6vw;
+}
+.linden-house .projects-data {
+  margin-top: 65px;
+}
+.linden-house .projects-data .detail {
+  font-size: 23px;
+  line-height: 29px;
+}
+.linden-house .projects-data .btn {
+  padding: 11px 24px;
+}
+.formwerks-architecture img {
+  margin-top: 48px;
+  padding-right: 6vw;
+}
+.linden-house .space .swiper-carousel-project {
+  top: -115px;
+}
+.linden-house .space .swiper-carousel-project .swiper-slide img{
+  height: 360px;
+}
+.linden-house .space .swiper-carousel-project .swiper-slide {
+  width: auto!important;
+}
+.linden-house .space.global-padding {
+  padding-top: 80px;
+}
+.linden-house .space p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 13px;
+}
+/* register */
+.linden-house .register-section {
+  padding-top: 80px;
+}
+.linden-house .form .checkbox-wrapper {
+  flex-direction: column;
+}
+.linden-house .form .checkbox {
+  width: 25px !important;
+  margin-bottom: 17px;
+}
+.linden-house .form .agreement {
+  margin-left: 0px;
+}
+.linden-house .form .is-small {
+  width: 100%;
+}
+.linden-house .backto-allprojects .btn {
+  margin: 100px 0;
+}
+}
+@media (max-width: 450px) { 
+  .linden-house .projects-data .heading {
+    font-size: 18.5px;
+    line-height: 26px;
+  }
+  .linden-house .projects-data .detail {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
 }

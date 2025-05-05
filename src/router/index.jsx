@@ -10,6 +10,7 @@ const MixedUse = lazy(() => import("../pages/MixedUse"));
 const HomeownerCare = lazy(() => import("../pages/HomeownerCare"));
 const Contact = lazy(() => import("../pages/Contact"));
 const Privacy = lazy(() => import("../pages/Privacy"));
+const ThankYou = lazy(() => import("../pages/ThankYou"));
 
 const routes = [
   {
@@ -47,6 +48,10 @@ const routes = [
       {
         path: "/privacy",
         element: <Privacy />,
+      },
+      {
+        path: "/thankyou",
+        element: <ThankYou />,
       },
     ],
   },

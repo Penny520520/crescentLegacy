@@ -19,3 +19,35 @@
 .project-intro p:last-child {
   margin-bottom: 0px;
 }
+
+/*
+|------------------------------------------------------
+|  Query Media
+|------------------------------------------------------
+*/
+@media (max-width: 899px) { 
+  .project-intro .description {
+    margin-top: 80px;
+  }
+  .linden-house .project-intro p {
+    width: 100%;
+  }
+
+}
+@media (max-width: 599px) {
+.linden-house .intro-container{
+  padding-top: 80px!important;
+  padding-bottom: 80px!important;
+}
+.project-intro .num {
+  font-size: 25px;
+  line-height: 33px;
+  margin-top: 18px;
+}
+.location-section {
+  margin-right: 6vw;
+}
+.location-container .project-intro p {
+  width: 100%!important;
+}
+}

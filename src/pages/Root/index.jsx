@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 function Root() {
+  const { pathname } = useLocation();
   return (
     <div className="page-wrapper">
-      <Header />
+      {pathname === "/thankyou" ? null : <Header />}
       <Outlet />
       <ScrollRestoration />
-      <Footer />
+      {pathname === "/thankyou" ? null : <Footer />}
     </div>
   );
 }
