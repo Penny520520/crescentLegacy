@@ -89,83 +89,91 @@ export const locationImgs = [
     path: "../images/linden-house/location/5.jpg",
   },
   {
-    path: "../images/linden-house/location/1.jpg",
+    path: "../images/linden-house/location/6.jpg",
   },
   {
-    path: "../images/linden-house/location/2.jpg",
+    path: "../images/linden-house/location/7.jpg",
   },
   {
-    path: "../images/linden-house/location/3.jpg",
+    path: "../images/linden-house/location/8.jpg",
+  },
+];
+export const locationImgsM = [
+  {
+    path: "../images/linden-house/location/1-m.jpg",
   },
   {
-    path: "../images/linden-house/location/4.jpg",
+    path: "../images/linden-house/location/2-m.jpg",
   },
   {
-    path: "../images/linden-house/location/5.jpg",
+    path: "../images/linden-house/location/3-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/4-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/5-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/6-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/7-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/8-m.jpg",
   },
 ];
 export const exteriorImgs = [
   {
     path: "../images/linden-house/exterior/1.jpg",
-    caption: "Architecture (Maple Cres.)",
+    caption: "Courtyard / Unit E & F with Private Garden",
   },
   {
     path: "../images/linden-house/exterior/2.jpg",
-    caption: "Street View",
+    caption: "Architecture (Maple Cres.)",
   },
   {
     path: "../images/linden-house/exterior/3.jpg",
-    caption: "Courtyard",
+    caption: "Private Rooftop Terrace (Unit A / B / C / D)",
   },
   {
     path: "../images/linden-house/exterior/1.jpg",
-    caption: "Architecture (Maple Cres.)",
+    caption: "Courtyard / Unit E & F with Private Garden",
   },
   {
     path: "../images/linden-house/exterior/2.jpg",
-    caption: "Street View",
+    caption: "Architecture (Maple Cres.)",
   },
   {
     path: "../images/linden-house/exterior/3.jpg",
-    caption: "Courtyard",
+    caption: "Private Rooftop Terrace (Unit A / B / C / D)",
   },
 ];
 export const interiorImgs = [
   {
     path: "../images/linden-house/interior/1.jpg",
-    caption: "Living + Dining + Kitchen (Unit X)",
+    caption: "Unit F - Living + Dining + Kitchen (Dark Scheme)",
   },
   {
     path: "../images/linden-house/interior/2.jpg",
-    caption: "Living Space (Unit X)",
+    caption: "Unit B - Living Space",
   },
   {
     path: "../images/linden-house/interior/3.jpg",
-    caption: "Kitchen (Unit X)",
+    caption: "Unit B - Kitchen (Light Scheme)",
   },
   {
-    path: "../images/linden-house/interior/1.jpg",
-    caption: "Living + Dining + Kitchen (Unit X)",
+    path: "../images/linden-house/interior/4.jpg",
+    caption: "Primary Bedroom with Balcony",
   },
   {
-    path: "../images/linden-house/interior/2.jpg",
-    caption: "Living Space (Unit X)",
+    path: "../images/linden-house/interior/5.jpg",
+    caption: "Primary Ensuite Bathroom",
   },
   {
-    path: "../images/linden-house/interior/3.jpg",
-    caption: "Kitchen (Unit X)",
-  },
-  {
-    path: "../images/linden-house/interior/1.jpg",
-    caption: "Living + Dining + Kitchen (Unit X)",
-  },
-  {
-    path: "../images/linden-house/interior/2.jpg",
-    caption: "Living Space (Unit X)",
-  },
-  {
-    path: "../images/linden-house/interior/3.jpg",
-    caption: "Kitchen (Unit X)",
+    path: "../images/linden-house/interior/6.jpg",
+    caption: "In-Home Elevator (Optional Upgrade for Unit B & C)",
   },
 ];
 

@@ -1,6 +1,7 @@
 /* bnr */
 .banner {
   z-index: 1;
+  background-color: #FFFFFF;
 }
 .bg-video-container {
   position: relative;

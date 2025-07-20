@@ -54,6 +54,11 @@ const Banner = ({ url, heading, isProject }) => {
             )}
           </TextAppear>
         </div>
+        {isProject && (
+          <Link to="#register" className="btn btn-project-bnr line">
+            Register
+          </Link>
+        )}
         <div className="line"></div>
       </div>
       {hasScolled && (
