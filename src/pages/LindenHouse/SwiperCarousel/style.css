@@ -107,12 +107,12 @@
 }
 @media (max-width: 450px) {   
 .linden-house .space .swiper-carousel-project .swiper-slide img{
-  height: 300px!important;
+  height: 260px!important;
   width: auto!important;
 }
-.linden-house .space .mySwiper p{
+/* .linden-house .space .mySwiper p{
   font-size: 14px;
-}
+} */
 /* .linden-house .space .mySwiper .swiper-slide {
   margin-right: 15px!important;
 } */

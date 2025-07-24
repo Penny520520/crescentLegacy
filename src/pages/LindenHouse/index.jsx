@@ -8,7 +8,7 @@ import SwiperCarousel from "./SwiperCarousel";
 import CustomizedAccordions from "../../components/Accordion";
 import {
   locationImgs,
-  locationImgsM,
+  interiorImgsM,
   exteriorImgs,
   interiorImgs,
 } from "../../components/Data";
@@ -191,10 +191,7 @@ const LindenHouse = () => {
                 ]}
               />
               <Location />
-              <SwiperCarousel
-                projects={matches599 ? locationImgsM : locationImgs}
-                initialIndex="1"
-              />
+              <SwiperCarousel projects={locationImgs} initialIndex="1" />
               {/* <div className="btn-wrapper">
                 {matches ? (
                   <Link to="/legacy" className="btn mobile">
@@ -237,7 +234,10 @@ const LindenHouse = () => {
             </Box>
             <Box sx={{ flexGrow: 1 }} className="exterior space global-padding">
               <Intro num="05" heading={["Interior"]} />
-              <SwiperCarousel projects={interiorImgs} initialIndex="1" />
+              <SwiperCarousel
+                projects={matches599 ? interiorImgsM : interiorImgs}
+                initialIndex="1"
+              />
             </Box>
           </div>
           <Box

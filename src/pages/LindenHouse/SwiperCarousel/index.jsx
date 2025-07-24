@@ -30,7 +30,14 @@ export default function SwiperCarousel({ projects, initialIndex }) {
           return (
             <SwiperSlide key={index}>
               <img src={project.path} alt="gallery" />
-              {project.caption && <p>{project.caption}</p>}
+              <p>
+                {project.caption &&
+                  project.caption.map((cap, index) => (
+                    <span key={index} style={{ display: "block" }}>
+                      {cap}
+                    </span>
+                  ))}
+              </p>
             </SwiperSlide>
           );
         })}
