@@ -98,6 +98,32 @@ export const locationImgs = [
     path: "../images/linden-house/location/8.jpg",
   },
 ];
+export const locationImgsM = [
+  {
+    path: "../images/linden-house/location/1-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/2-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/3-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/4-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/5-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/6-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/7-m.jpg",
+  },
+  {
+    path: "../images/linden-house/location/8-m.jpg",
+  },
+];
 export const exteriorImgs = [
   {
     path: "../images/linden-house/exterior/1.jpg",
