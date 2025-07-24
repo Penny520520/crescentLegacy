@@ -193,7 +193,7 @@ const LindenHouse = () => {
               />
               <Location />
               <SwiperCarousel
-                projects={matches599 ? locationImgs : locationImgs}
+                projects={matches599 ? locationImgsM : locationImgs}
                 initialIndex="1"
               />
               {/* <div className="btn-wrapper">
