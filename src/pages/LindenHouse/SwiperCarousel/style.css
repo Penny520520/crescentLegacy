@@ -98,5 +98,23 @@
   .swiper-carousel-project .swiper-button-prev {
     right: 23vw;
   }
+  
+.linden-house .space .swiper-carousel-project .swiper-slide img{
+  height: 280px!important;
+  width: auto!important;
+}
+
+}
+@media (max-width: 450px) {   
+.linden-house .space .swiper-carousel-project .swiper-slide img{
+  height: 300px!important;
+  width: auto!important;
+}
+.linden-house .space .mySwiper p{
+  font-size: 14px;
+}
+/* .linden-house .space .mySwiper .swiper-slide {
+  margin-right: 15px!important;
+} */
 
 }
